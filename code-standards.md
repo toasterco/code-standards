@@ -27,6 +27,12 @@ var bar = {
 	'baz': true
 };
 
+/*
+	It's an example function!
+	@param {number} x
+	@param {number} y
+	@return {boolean} True if x is equal to y.
+*/
 var foo = function(x, y) {
 	for (var i = 0; i < 5; i++) {
 		console.log(i);
