@@ -1,4 +1,4 @@
-### Code quality and testability guidelines
+## Code quality and testability guidelines
 
 A set of JavaScript code standards for programmers at Toaster Ltd.
 
