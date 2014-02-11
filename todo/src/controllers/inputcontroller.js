@@ -26,7 +26,10 @@ t.app.InputController.prototype.clear = function() {
 */
 t.app.InputController.prototype.onSubmit = function(fn, context) {
 	goog.events.listen(this.button, 'click', function() {
-		fn.call(context, this.getValue());
-		this.clear();
+		var value = this.getValue();
+		if (value) {
+			fn.call(context, value);
+			this.clear();
+		}
 	}, false, this);
 };

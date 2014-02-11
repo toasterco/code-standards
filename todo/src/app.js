@@ -41,12 +41,10 @@ t.App.prototype.init = function() {
 
 	// On submit, add a new item to the todoModel collection.
 	this.inputController.onSubmit(function(value) {
-		if (value) {
-			this.todoModel.add({
-				item: value,
-				done: false
-			});
-		}
+		this.todoModel.add({
+			item: value,
+			done: false
+		});
 	}, this);
 
 };
