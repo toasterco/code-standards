@@ -38,7 +38,8 @@ var foo = function(x, y) {
 		console.log(i);
 	}
 	if (x === y) {
-		return true;
+		console.log('x and y are equal.');
 	}
+	return x === y;
 };
 ```
