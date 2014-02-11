@@ -14,6 +14,8 @@ Due to the nature of the work we do, we aim to achieve these qualities in all th
 
 When handing over code to clients, we want to be kind to future maintainers (which in a lot of the cases, will be you. So be kind to your future self as well!). It should be simple to modify existing features, and designed in a way that reduces the friction of adding new features.
 
+Try to take a pragmatic approach to application design, only adding features as they are needed, while making it easy to continue adding features without affecting too much of the existing codebase.
+
 * Assume the spec will change.
 * Agree important design choices across all developers working on the project.
 * Follow a modular and event-oriented approach to application design.
@@ -26,7 +28,6 @@ When handing over code to clients, we want to be kind to future maintainers (whi
 
 When writing code we should try to optimise for readability. It should be easy for any other experienced JavaScript programmer to usefully modify your code.
 
-* Follow a modular and event-oriented approach to application design.
 * Document all non-trivial code in accordance with JSDoc/Closure standards.
 * Follow Toaster Ltd/Closure code style guidelines.
 
@@ -34,6 +35,5 @@ When writing code we should try to optimise for readability. It should be easy f
 
 When refactoring code and adding new features, we want to have as much automated testing as possible to catch any regressions. Writing for testability also improves code quality, as your functions must produce an expectable and predictable result across many cases.
 
-* Follow a modular and event-oriented approach to application design.
 * Write functions that have a predictible behaviour.
 * Write unit tests.

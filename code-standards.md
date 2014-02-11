@@ -46,6 +46,6 @@ var foo = function(x, y) {
 
 ### Seperation of concerns
 
-* Make each function do one thing only.
+* Make sure each function does one thing only.
 * Rather than have long functions to do a job, compose a set of smaller,
 well defined functions.
