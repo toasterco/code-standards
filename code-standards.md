@@ -51,7 +51,6 @@ var foo = function(x, y) {
 * Do not use one letter variable names or non-standard abbreviations.
 * Variable names should be descriptive and self-explanatory.
 * Multi word names should use camel case.
-
 * CSS identifiers should be lower case hyphenated.
 
 ```js
