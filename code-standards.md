@@ -43,3 +43,9 @@ var foo = function(x, y) {
 	return x === y;
 };
 ```
+
+### Seperation of concerns
+
+* Make each function do one thing only.
+* Rather than have long functions to do a job, compose a set of smaller,
+well defined functions.

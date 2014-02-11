@@ -1,0 +1,3 @@
+[submodule "todo/src/js/lib"]
+	path = todo/src/js/lib
+	url = https://code.google.com/p/closure-library/

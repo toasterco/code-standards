@@ -18,13 +18,15 @@ When handing over code to clients, we want to be kind to future maintainers (whi
 * Agree important design choices across all developers working on the project.
 * Follow a modular and event-oriented approach to application design.
 * Keep modules and interfaces as small as possible. Follow the rule of seperation.
-* Provide an overall project documentation, including how to build, deploy, and an overview of the important code modules and how they interact with each other.
+* Provide an overall project documentation, including how to build, deploy, run tests along with an overview of the important code modules and how they interact with each other.
 * Try to provide special documentation for any hacks. (Add a comment to any particularly hacky code explaining how it works and why it is there.)
+* Make sure to have a one step build and deploy tool.
 
 ### Readability
 
 When writing code we should try to optimise for readability. It should be easy for any other experienced JavaScript programmer to usefully modify your code.
 
+* Follow a modular and event-oriented approach to application design.
 * Document all non-trivial code in accordance with JSDoc/Closure standards.
 * Follow Toaster Ltd/Closure code style guidelines.
 
@@ -32,5 +34,6 @@ When writing code we should try to optimise for readability. It should be easy f
 
 When refactoring code and adding new features, we want to have as much automated testing as possible to catch any regressions. Writing for testability also improves code quality, as your functions must produce an expectable and predictable result across many cases.
 
+* Follow a modular and event-oriented approach to application design.
 * Write functions that have a predictible behaviour.
 * Write unit tests.

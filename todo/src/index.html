@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Example Todo Application</title>
+  <style>
+  .list > li {
+    width: 250px;
+  }
+  .incomplete {}
+  .complete {
+    text-decoration: line-through;
+  }
+  </style>
+</head>
+<body>
+  <div class="input">
+   <input class="todo-input">
+   <button class="add-button">Add item</button>
+  </div>
+  <div class="stats">
+    <span class="amount"></span>
+    <span class="done"></span>
+  </div>
+  <div>
+    <ul class="list">
+    </ul>
+  </div>
+
+  <script src="../lib/closure/goog/base.js"></script>
+  <script src="../src/models/todos.js"></script>
+  <script src="../src/views/listview.js"></script>
+  <script src="../src/views/statview.js"></script>
+  <script src="../src/controllers/inputcontroller.js"></script>
+  <script src="../src/build.js"></script>
+  <script src="../src/app.js"></script>
+
+  <script>
+    //Initialisation code of application module.
+    (function() {
+      var app = t.app.build(new t.App(
+        document.querySelector('.list'),
+        document.querySelector('.stats'),
+        document.querySelector('.todo-input'),
+        document.querySelector('.add-button'))
+      );
+
+      // Instantiate with three example todo items.
+      var examples = [
+        'hello world',
+        'click me',
+        'drink coffee'
+      ];
+
+      goog.array.forEach(examples, function(item) {
+        app.todoModel.add({
+          item: item,
+          done: false
+        });
+      });
+    }());
+  </script>
+
+</body>
+</html>
