@@ -14,6 +14,8 @@ Due to the nature of the work we do, we aim to achieve these qualities in all th
 
 When handing over code to clients, we want to be kind to future maintainers (which in a lot of the cases, will be you. So be kind to your future self as well!). It should be simple to modify existing features, and designed in a way that reduces the friction of adding new features.
 
+* Assume the spec will change.
+* Agree important design choices across all developers working on the project.
 * Follow a modular and event-oriented approach to application design.
 * Keep modules and interfaces as small as possible. Follow the rule of seperation.
 * Provide an overall project documentation, including how to build, deploy, and an overview of the important code modules and how they interact with each other.
