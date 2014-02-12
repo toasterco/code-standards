@@ -21,7 +21,7 @@ t.app.ListView.prototype.clear = function() {
 */
 t.app.ListView.prototype.events = function(eventMap, context) {
 	var el = this.el;
-	goog.object.forEach(evengtMap, function(obj, key) {
+	goog.object.forEach(eventMap, function(obj, key) {
 		goog.events.listen(el, key, goog.bind(eventMap[key], this));
 	}, context);
 };
