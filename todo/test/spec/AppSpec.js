@@ -3,52 +3,51 @@ goog.require('t.app.InputController');
 
 describe("Application", function() {
 
-  describe("Todo Collection", function() {
-  	var todoModels;
+	describe("Todo Collection", function() {
+		var todoModels;
 
-  	beforeEach(function() {
-  		todoModels = new t.app.TodoModel();
+		beforeEach(function() {
+			todoModels = new t.app.TodoModel();
 		})
 
-  	it('should have a list property which is an object', function() {
-  		todoModels.should.have.property('list');
-  		todoModels.list.should.be.type('object');
-  	});
+		it('should have a list property which is an object', function() {
+			todoModels.should.have.property('list');
+			todoModels.list.should.be.type('object');
+		});
 
-  	it('add() should add an item into Collection and return its ID', function() {
+		it('add() should add an item into Collection and return its ID', function() {
 			var payload = {item: 'hello', done: false};
 			var id = todoModels.add(payload);
 			todoModels.find(id).should.eql(payload);
-  	});
+		});
 
-  	it('toggle() should toggle an items done boolean', function() {
+		it('toggle() should toggle an items done boolean', function() {
 			var id = todoModels.add({item: 'hello', done: false});
 			var model = todoModels.find(id);
 			model.done.should.equal(false);
 			todoModels.toggle(id);
 			model.done.should.equal(true);
-  	});
+		});
 
-  	it('remove() should remove an item from list', function() {
-  		var payload = {item: 'hello', done: false};
+		it('remove() should remove an item from list', function() {
+			var payload = {item: 'hello', done: false};
 			var id = todoModels.add(payload);
 			todoModels.find(id).should.eql(payload);
 			todoModels.remove(id);
 			(todoModels.find(id) === undefined).should.equal(true);
-  	});
+		});
 
-  	it('changed() should run onChanged fns', function(done) {
-  		var done = false;
-  		var fn = function() {
-  			done = true;
-  		};
+		it('changed() should run onChanged fns', function(done) {
+			var done = false;
+			var fn = function() {
+				done = true;
+			};
 
-  		todoModels.onChange([fn]);
-  		todoModels.changed();
-  		done.should.equal(true);
-  	});
-
-  });
+			todoModels.onChange([fn]);
+			todoModels.changed();
+			done.should.equal(true);
+		});
+	});
 
 	describe('Input Controller', function() {
 		var inputController, input;
