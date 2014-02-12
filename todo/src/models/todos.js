@@ -28,16 +28,20 @@ t.app.TodoModel.prototype.changed = function() {
 
 /*
 	Add an item to map of todos using the nextId.
+	Returns the given ID of the model in collection.
 
 	The items object structure should be:
 	item: string,
 	done: boolean
 
 	@param {object} item
+	@return {string} unique ID of model
 */
 t.app.TodoModel.prototype.add = function(todo) {
-	this.list[this.uid.getNextUniqueId()] = todo;
+	var id = this.uid.getNextUniqueId();
+	this.list[id] = todo;
 	this.changed();
+	return id;
 };
 
 /*
