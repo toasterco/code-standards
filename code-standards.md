@@ -8,16 +8,22 @@ and designed for cross-browser consistency.
 
 ### Variable declaration
 
-* Always use var when assigning a variable. If assigning a global variable,
+* Always use `var` when assigning a variable ([don't use single `var` declarations](http://danielhough.co.uk/blog/single-var-pattern-rant)).
+* If assigning a global variable,
 explicitly declare it as a property of the global object.
 * Use a new line for each assignment.
 * Unassigned declarations can be done as a comma seperated line.
 
 ```js
+/* The 'Way' */
 var x = 5;
 var y = 1;
+var foo = 'foo';
+
+/* single-line, unassigned declarations */
 var a, b, c;
 
+/* Explicitly declaring  a global property */
 window.z = 6;
 ```
 
